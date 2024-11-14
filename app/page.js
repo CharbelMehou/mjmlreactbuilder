@@ -11,6 +11,7 @@ import MjSocial from './components/MjSocial';
 import MjSocialElement from './components/MjSocialElement';
 import './components/style.css';
 import { convertMjmlJsonToReact } from './utils/mjmlConverter';
+import MjImage from './components/MjImage';
 
 export default function Home() {
   const [mjmlInput, setMjmlInput] = useState('');
@@ -40,6 +41,7 @@ export default function Home() {
         MjBody,
         MjSection,
         MjColumn,
+        MjImage,
         MjText,
         MjButton,
         MjSocial,
@@ -73,12 +75,10 @@ export default function Home() {
         Convertir
       </button>
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      <div style={{ marginTop: '20px' }}>
         <h3>Rendu des Composants React :</h3>
         <div className="frame-container">
           {reactOutput}
         </div>
       </div>
-    </div>
   );
 }

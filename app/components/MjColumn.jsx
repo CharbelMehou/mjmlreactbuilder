@@ -26,6 +26,7 @@ const MjColumn = ({
     backgroundColor: backgroundColor || "transparent",
     border: border || "none",
     padding: padding || "10px 25px",
+    boxSizing: 'border-box',
   };
 
   return (

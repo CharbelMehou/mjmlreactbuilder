@@ -16,7 +16,7 @@ const tagMap = {
   'mj-button': 'MjButton',
   'mj-social': 'MjSocial',
   'mj-social-element': 'MjSocialElement',
-  // Ajoutez d'autres mappings si nécessaire
+  'mj-image':'MjImage',
 };
 
 /**

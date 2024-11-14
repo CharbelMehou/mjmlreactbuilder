@@ -17,7 +17,7 @@ const MjImage = ({
   const style = {
     src: src || "",
     alt: alt || "",
-    width: width || "auto",
+    width: width || "100%",
     height: height || "auto",
     borderRadius: borderRadius || "0",
     border: border || "none",

@@ -16,7 +16,8 @@ const MjButton = ({
   borderLeft,
   borderRight,
   borderTop,
-  padding,
+  padding="10px 25px",
+  innerPadding,
   paddingBottom,
   paddingLeft,
   paddingRight,
@@ -32,15 +33,19 @@ const MjButton = ({
     border: border || "none",
     height: height || "auto",
     width: width || "auto",
-    padding: padding || "10px 25px",
+    padding:innerPadding || "10px 25px",
     target: target || "_self",
     href: href || "#",
     borderRadius: "3px",
     cursor: "pointer",
   };
+ 
+  const containerStyle={
+  padding: padding || "10px 25px",
+ }
 
   return (
-    <div style={{display:"flex",flexDirection:"row",justifyContent:"center",alignItems:"center"}}>
+    <div style={{display:"flex",flexDirection:"row",justifyContent:"center",alignItems:"center",...containerStyle}}>
     <a href={href} target={target} style={style}>
       {children}
     </a>
