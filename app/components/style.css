@@ -1,0 +1,32 @@
+/*Container style*/
+.frame-container{
+    display: flex;
+    flex-direction: column;
+}
+/*Section style*/
+.section{
+    display:flex;
+    flex-direction:row;
+}
+@media (max-width: 600px) {
+    .section{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .frame-container{
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 768px) {
+    .section{
+        flex-wrap: wrap;
+    }
+    .frame-container{
+        display: flex;
+        flex-direction: column;
+        width: 70dvw;
+    }
+}
