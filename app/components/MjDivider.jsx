@@ -2,6 +2,7 @@
 import React from "react";
 
 const MjDivider = ({
+  align,
   containerBackgroundColor,
   borderColor,
   borderStyle, //Dashed dotted solid
@@ -14,20 +15,25 @@ const MjDivider = ({
   width,
 }) => {
   const style = {
-    containerBackgroundColor: containerBackgroundColor || "transparent",
-    borderColor: borderColor || "transparent",
+    borderColor: borderColor || "#000000",
     borderStyle: borderStyle || "solid",
-    borderWidth: borderWidth || "1px",
-    padding: padding || "0",
-    paddingTop: paddingTop || "0",
-    paddingBottom: paddingBottom || "0",
-    paddingLeft: paddingLeft || "0",
-    paddingRight: paddingRight || "0",
+    borderWidth: borderWidth || "1px",// la widht des composant du divider
+    width: width || "100%",//divider width
+    borderBottom:"none",
+    borderLeft:"none",
+    borderRight:"none",
+    height:"0"
   };
-
+  const containerStyle = {
+    display: "flex",
+    justifyContent: align || "center",
+    padding: padding || "10px 25px",
+    backgroundColor: containerBackgroundColor || "transparent",
+  };
   return (
-    <p style={style}>
-</p>
+    <div style={containerStyle}>
+      <p style={style}></p>
+    </div>
   );
 };
 

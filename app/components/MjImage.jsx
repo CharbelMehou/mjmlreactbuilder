@@ -6,18 +6,26 @@ const MjImage = ({
   alt,
   width,
   height,
+  align,
   borderRadius,
   border,
+  borderTop,
   borderBottom,
   borderLeft,
   borderRight,
-  borderTop,
+  padding,
+  paddingTop,
+  paddingBottom,
+  paddingRight,
+  paddingLeft,
   containerBackgroundColor,
 }) => {
   const style = {
     src: src || "",
     alt: alt || "",
     width: width || "100%",
+    maxWidth:'600px',
+    maxHeight:'600px',
     height: height || "auto",
     borderRadius: borderRadius || "0",
     border: border || "none",
@@ -25,11 +33,20 @@ const MjImage = ({
     borderLeft: borderLeft || "none",
     borderRight: borderRight || "none",
     borderTop: borderTop || "none",
-    containerBackgroundColor: containerBackgroundColor || "transparent",
+  };
+  const containerStyle = {
+    display: "flex",
+    flex: '1',
+    width: "100%",
+    padding: padding || "10px 25px",
+    backgroundColor: containerBackgroundColor || "transparent",
+    justifyContent: align || "center",
   };
 
   return (
-    <img src={src} alt={alt} style={style}  />
+    <div style={containerStyle}>
+      <img src={src} alt={alt} style={style} />
+    </div>
   );
 };
 

@@ -17,7 +17,7 @@ const MjTable = ({
   const style = {
     border: border || "none",
     color: color || "#333333",
-    containerBackgroundColor: containerBackgroundColor || "transparent",
+    backgroundColor: containerBackgroundColor || "transparent",
     fontFamily: fontFamily || "Ubuntu, Helvetica, Arial, sans-serif",
     fontSize: fontSize || "13px",
     padding: padding || "10px 25px",

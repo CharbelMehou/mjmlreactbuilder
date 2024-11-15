@@ -12,6 +12,9 @@ import MjSocialElement from './components/MjSocialElement';
 import './components/style.css';
 import { convertMjmlJsonToReact } from './utils/mjmlConverter';
 import MjImage from './components/MjImage';
+import MjNavbar from './components/MjNavbar';
+import MjNavbarLink from './components/MjNavbarLink';
+import MjDivider from './components/MjDivider';
 
 export default function Home() {
   const [mjmlInput, setMjmlInput] = useState('');
@@ -46,6 +49,9 @@ export default function Home() {
         MjButton,
         MjSocial,
         MjSocialElement,
+        MjNavbar,
+        MjNavbarLink,
+        MjDivider,
       };
 
       // Convertir le JSON MJML en éléments React

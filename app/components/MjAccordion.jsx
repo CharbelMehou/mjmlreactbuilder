@@ -20,7 +20,7 @@ backgroundColor,
 
     const accordionStyle = {
         border:border || "2px solid black",
-        containerBackgroundColor:containerBackgroundColor || "transparent",
+        backgroundColor:containerBackgroundColor || "transparent",
         fontFamily:fontFamily || "Ubuntu, Helvetica, Arial, sans-serif",
         padding:padding || "10px 25px",
         paddingTop:paddingTop || "none",
@@ -28,7 +28,7 @@ backgroundColor,
         paddingLeft:paddingLeft || "none",
         paddingRight:paddingRight || "none",
     };
-    const  accordionElementStyle = {
+    const accordionElementStyle = {
         iconWrappedUrl:iconWrappedUrl || "https://i.imgur.com/bIXv1bk.png",
         iconUnwrappedUrl:iconUnwrappedUrl || "https://i.imgur.com/w4uTygT.png",
         iconWidth:iconWidth || "20px",

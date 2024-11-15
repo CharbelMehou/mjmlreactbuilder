@@ -17,6 +17,9 @@ const tagMap = {
   'mj-social': 'MjSocial',
   'mj-social-element': 'MjSocialElement',
   'mj-image':'MjImage',
+  'mj-navbar':"MjNavbar",
+  'mj-navbar-link':'MjNavbarLink',
+  'mj-divider':'MjDivider',
 };
 
 /**
@@ -30,6 +33,22 @@ const convertAttributes = (attribs) => {
   }
   return newAttribs;
 };
+
+function assignKeysToElements(elements, keyPrefix = '') {
+  if (Array.isArray(elements)) {
+    return elements.map((child, index) => {
+      if (React.isValidElement(child)) {
+        const newKey = `${keyPrefix}-content-${index}`;
+        return React.cloneElement(child, { key: newKey });
+      }
+      return child;
+    });
+  } else if (React.isValidElement(elements)) {
+    const newKey = `${keyPrefix}-content`;
+    return React.cloneElement(elements, { key: newKey });
+  }
+  return elements;
+}
 
 /**
  * Génère un élément React à partir d'un nœud MJML.
@@ -56,7 +75,8 @@ export const generateReactElement = (node, components, keyPrefix = '') => {
   // Ajouter le contenu texte si présent
   if (content) {
     const parsedContent = parse(content);
-    childrenElements.unshift(parsedContent);
+    const parsedContentWithKeys = assignKeysToElements(parsedContent, keyPrefix);
+    childrenElements.unshift(parsedContentWithKeys);
   }
 
   // Générer une clé unique pour l'élément

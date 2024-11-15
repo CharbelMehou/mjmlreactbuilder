@@ -4,6 +4,7 @@ import React from 'react';
 const MjText = ({ align, fontSize, fontWeight, color,padding,paddingTop,paddingBottom,paddingLeft,paddingRight, children}) => {
   const style = {
     display:"flex",
+    flexDirection:"column",
     justifyContent:align || 'left',
     textAlign: align || 'left',
     fontSize: fontSize || '14px',
