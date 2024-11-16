@@ -20,6 +20,10 @@ const tagMap = {
   'mj-navbar':"MjNavbar",
   'mj-navbar-link':'MjNavbarLink',
   'mj-divider':'MjDivider',
+  'mj-accordion':'MjAccordion',
+  'mj-accordion-text':'MjAccordionText',
+  'mj-accordion-title':'MjAccordionTitle',
+  'mj-accordion-element':'MjAccordionElement',
 };
 
 /**

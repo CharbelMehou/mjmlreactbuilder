@@ -15,6 +15,10 @@ import MjImage from './components/MjImage';
 import MjNavbar from './components/MjNavbar';
 import MjNavbarLink from './components/MjNavbarLink';
 import MjDivider from './components/MjDivider';
+import MjAccordion from './components/MjAccordion';
+import MjAccordionElement from './components/MjAccordionElement';
+import MjAccordionText from './components/MjAccordionText';
+import MjAccordionTitle from './components/MjAccordionTitle';
 
 export default function Home() {
   const [mjmlInput, setMjmlInput] = useState('');
@@ -52,6 +56,10 @@ export default function Home() {
         MjNavbar,
         MjNavbarLink,
         MjDivider,
+        MjAccordion,
+        MjAccordionElement,
+        MjAccordionText,
+        MjAccordionTitle,
       };
 
       // Convertir le JSON MJML en éléments React
